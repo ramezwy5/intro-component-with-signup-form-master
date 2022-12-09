@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root{
+    --Red: hsl(0, 100%, 74%);
+    --Green: hsl(154, 59%, 51%);
+    --Blue: hsl(248, 32%, 49%);
+    --Dark-Blue: hsl(249, 10%, 26%);
+    --Grayish-Blue: hsl(246, 25%, 77%);
+}
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+body{
+    background-image: url(./images/bg-intro-desktop.png);
+    background-color: var(--Red);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+}
+main{
+    width: 75%;
+    display: flex;
+    margin: 3% auto 2%;
+    justify-content: space-between;
+}
+
+#info{
+    width: 42%;    
+    color: #fff;
+    align-self: center;
+}
+#info h1{
+    font-size: 2.375rem;
+    font-weight: 700;
+}
+
+#form{
+    width: 50%;
+    margin-left: auto;
+}
+#try{
+    color: #fff;
+    background-color: var(--Blue);
+    margin-bottom: 5%;
+    padding: 3% 5%;
+    border-radius: 15px;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 1px 2px 0px #c5c5c5, 0 5px 10px 1px #8c8c8c;
+}
+#try b{
+    display: inline-block;
+}
+
+#fields{
+    background-color: #fff;
+    padding: 7%;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 5px 5px 5px #8c8c8c;
+    position: relative;
+}
+form div{
+    text-align: end;
+}
+
+input, button{
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 3%;
+    border-radius: 5px;
+    margin-top: 5%;
+}
+input{
+    border-color: var(--Grayish-Blue);
+}
+button{
+    background-color: var(--Green);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+#fields p{
+    font-size: .625rem;
+}
+
+
+.error{
+    border-color: var(--Red);
+    background: url(images/icon-error.svg) no-repeat;
+    background-position: 95%;
+    z-index: 100;
+}
+
+span.message{
+    margin-left: auto;
+    text-align: end;
+    color: var(--Red);
+    font-weight: 400;
+    font-size: 0.625rem;
+}
+
+@media (max-width: 568px) {
+    main{
+        width: 100%;
+        flex-direction: column;
+        margin: auto;
+    }
+    #info, #form{
+        width: 100%
+    }
+    #info{
+        text-align: center;
+        padding: 5%;
+    }
+    #info h1{
+        font-size: 2rem;
+    }
+    #try{
+        padding: 5% 10%;
+        font-size: 1.2rem;
+    }
+    #fields p{
+        padding: 0 12%;
+    }
+}
